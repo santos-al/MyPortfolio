@@ -2,14 +2,18 @@
   font-family: Rubik, system-ui, Inter, Helvetica;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
   
   /* --color-primary: hsl(112, 50%, 90%); */
+  /* Primary is for background */
   --color-primary: 	hsl(57, 36%, 90%);
+  /* Secondary is for text */
   --color-secondary: hsl(112, 50%, 10%);
+  /* Boxes and other shape elements */
   --color-tertiary: hsl(172, 80%, 20%);
-  --color-accent: hsl(52, 80%, 20%);
+  /* Extras */
+  --color-accent: hsl(172, 80%, 80%);
+    /* Dark color */
+  --color-dark: hsl(0, 0%, 35%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,7 +25,6 @@
   width: 100%;
   margin: 0 auto;
   height: 100vh;
-  background-color: var(--color-primary);
 }
 
 body{
@@ -29,18 +32,26 @@ body{
 }
 
 [data-theme="dark"] {
+  /* Primary is for backgrounds */
   --color-primary: hsl(112, 50%, 10%);
-  --color-secondary: hsl(112, 50%, 90%);
-  --color-tertiary: hsl(172, 80%, 80%);
-  --color-accent: hsl(52, 80%, 80%);
+  /* Secondary is for text */
+  --color-secondary: hsl(52, 80%, 80%);
+  /* Boxes and other shape elements */
+  --color-tertiary: hsl(112, 50%, 90%);
+  /* Extras */
+  --color-accent: hsl(172, 80%, 80%);
+  /* Dark color */
+  --color-dark: hsl(0, 0%, 0%);
 }
 
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: hsl(112, 50%, 10%);
     --color-secondary: hsl(112, 50%, 90%);
     --color-tertiary: hsl(172, 80%, 80%);
     --color-accent: hsl(52, 80%, 80%);
   }
-}
+} */
+
+
