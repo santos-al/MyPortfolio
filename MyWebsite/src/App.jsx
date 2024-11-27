@@ -19,6 +19,7 @@ function App() {
     // Update localStorage whenever isDark changes
     localStorage.setItem('isDark', JSON.stringify(isDark));
   }, [isDark]);
+  
 
   return (
     <div className='App' data-theme={isDark ? "dark" : "light"}>
@@ -32,10 +33,11 @@ function App() {
       <h1 className='title'>Projects</h1>
       <a className='box' target="_blank" href='https://tech-sync.io/talent'>Tech-Sync</a>
       <a className='box'>Authentic Ear Academy (Coming Soon)</a>
-      {/* <footer>
+      <a className='box' target="_blank" rel="noopener noreferrer" href='./assets/Resume.pdf'>Resume</a>
+      <footer>
         <a target="_blank" href="https://github.com/santos-al" ><img src={githubLogo}/></a>
         <a target="_blank" href="https://www.linkedin.com/in/santos-alexandre1"><img src={linkedinLogo}/></a>
-      </footer> */}
+      </footer>
     </div>
   )
 }
