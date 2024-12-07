@@ -1,6 +1,8 @@
 import './App.css'
-import githubLogo from "./assets/github-mark.svg"
-import linkedinLogo from "./assets/linkedin.svg"
+import githubLogoLight from "./assets/github-mark-light.svg"
+import linkedinLogoLight from "./assets/linkedin-light.svg"
+import githubLogoDark from "./assets/github-mark-dark.svg"
+import linkedinLogoDark from "./assets/linkedin-dark.svg"
 
 import Toggle from './components/Toggle/Toggle'
 import NavBar from './components/NavBar/NavBar';
@@ -35,8 +37,8 @@ function App() {
       <a className='box'>Authentic Ear Academy (Coming Soon)</a>
       <a className='box' target="_blank" rel="noopener noreferrer" href='./assets/Resume.pdf'>Resume</a>
       <footer>
-        <a target="_blank" href="https://github.com/santos-al" ><img src={githubLogo}/></a>
-        <a target="_blank" href="https://www.linkedin.com/in/santos-alexandre1"><img src={linkedinLogo}/></a>
+        <a target="_blank" href="https://github.com/santos-al" ><img src={isDark ? githubLogoLight : githubLogoDark}/></a>
+        <a target="_blank" href="https://www.linkedin.com/in/santos-alexandre1"><img src={isDark ? linkedinLogoLight : linkedinLogoDark}/></a>
       </footer>
     </div>
   )
