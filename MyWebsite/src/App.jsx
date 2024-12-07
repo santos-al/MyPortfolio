@@ -37,8 +37,8 @@ function App() {
       <a className='box'>Authentic Ear Academy (Coming Soon)</a>
       <a className='box' target="_blank" rel="noopener noreferrer" href='./assets/Resume.pdf'>Resume</a>
       <footer>
-        <a target="_blank" href="https://github.com/santos-al" ><img src={isDark ? githubLogoLight : githubLogoDark}/></a>
-        <a target="_blank" href="https://www.linkedin.com/in/santos-alexandre1"><img src={isDark ? linkedinLogoLight : linkedinLogoDark}/></a>
+        <a target="_blank" href="https://github.com/santos-al" ><img className="svg-links" src={isDark ? githubLogoLight : githubLogoDark}/></a>
+        <a target="_blank" href="https://www.linkedin.com/in/santos-alexandre1"><img className="svg-links" src={isDark ? linkedinLogoLight : linkedinLogoDark}/></a>
       </footer>
     </div>
   )

@@ -41,3 +41,8 @@ footer {
 footer a {
   margin: 50px;
 }
+
+img.svg-links {
+  width: 58px;
+  height: 56px;
+}
