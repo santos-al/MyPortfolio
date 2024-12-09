@@ -23,6 +23,14 @@ function App() {
     // Update localStorage whenever isDark changes
     localStorage.setItem('isDark', JSON.stringify(isDark));
   }, [isDark]);
+
+  // Prevents background color bug on mobile devices. With this code the html element is also connected to the color theme of the App.
+  // Used Hex value for color instead of hsl, because it was rendering correctly.
+  if (isDark) {
+    document.getElementById("html").style.backgroundColor = "#10260d";
+  } else {
+    document.getElementById("html").style.backgroundColor = "#efeedc";
+  }
   
 
   return (
