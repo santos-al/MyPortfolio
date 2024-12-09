@@ -3,9 +3,11 @@ import githubLogoLight from "./assets/github-mark-light.svg"
 import linkedinLogoLight from "./assets/linkedin-light.svg"
 import githubLogoDark from "./assets/github-mark-dark.svg"
 import linkedinLogoDark from "./assets/linkedin-dark.svg"
+import MyResume from "./assets/Alexandre-Santos-Resume.pdf";
 
 import Toggle from './components/Toggle/Toggle'
 import NavBar from './components/NavBar/NavBar';
+
 
 import { useState, useEffect } from 'react'
 
@@ -35,7 +37,7 @@ function App() {
       <h1 className='title'>Projects</h1>
       <a className='box' target="_blank" href='https://tech-sync.io/talent'>Tech-Sync</a>
       <a className='box'>Authentic Ear Academy (Coming Soon)</a>
-      <a className='box' target="_blank" rel="noopener noreferrer" href='./assets/Resume.pdf'>Resume</a>
+      <a target="_blank" className='box' href={MyResume} download="Alexandre-Santos-Resume.pdf">Resume Download</a>
       <footer>
         <a target="_blank" href="https://github.com/santos-al" ><img className="svg-links" src={isDark ? githubLogoLight : githubLogoDark}/></a>
         <a target="_blank" href="https://www.linkedin.com/in/santos-alexandre1"><img className="svg-links" src={isDark ? linkedinLogoLight : linkedinLogoDark}/></a>
