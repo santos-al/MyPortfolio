@@ -6,6 +6,7 @@ import linkedinLogoDark from "./assets/linkedin-dark.svg";
 import MyResume from "./assets/Alexandre-Santos-Resume.pdf";
 import downArrowLight from "./assets/down-arrow-light.svg";
 import downArrowDark from "./assets/down-arrow-dark.svg";
+import techsyncLogo from "./assets/TechSync-Logo.png";
 
 import Toggle from './components/Toggle/Toggle';
 import NavBar from './components/NavBar/NavBar';
@@ -51,25 +52,37 @@ function App() {
         handleChange={() => setIsDark(!isDark)}
       />
       <h1 className='title'>Projects</h1>
-      <a className='box' target="_blank" href='https://tech-sync.io/talent'>Tech-Sync</a>
+      <a className='box' onClick={scrollToMoreInfo}>Tech-Sync</a>
       <a className='box'>Authentic Ear Academy (Coming Soon)</a>
       <a target="_blank" className='box' href={MyResume} download="Alexandre-Santos-Resume.pdf">Resume Download</a>
       <div className='scroll'>
-        <button className='down-arrow-button' onClick={scrollToMoreInfo}><img src={isDark ? downArrowLight : downArrowDark} className='down-arrow' /></button>
+        <button className='down-arrow-button' onClick={scrollToMoreInfo}><img src={isDark ? downArrowLight : downArrowDark} className='down-arrow' alt='arrow pointing downwards' /></button>
       </div>
       <div className='techsync-buffer'></div>
-      <div 
-        className='techsync'
+      <section 
+        className='techsync columns-2'
         ref={techSyncRef}
       >
-        <h2>TechSync</h2>
-        <h3>Overview</h3>
-        <p>overview explanation</p>
-        <h3>Tech specs</h3>
-        <p>tech explanation</p>
-      </div>
+
+        <div className='w-1/2'>
+          <div className='flex justify-center'>
+            <a className='project-title' target="_blank" href='https://tech-sync.io/talent'>Tech-Sync</a>
+          </div>
+          <div>
+            <h3>Overview</h3>
+            <p>overview explanation</p>
+          </div>
+          <div>
+            <h3>Tech specs</h3>
+            <p>tech explanation</p>           
+          </div>
+        </div>
+        <div className='w-1/2 flex items-center justify-center'>
+          <img className="techsync-logo" src={techsyncLogo} alt='Logo for TechSync' ></img>
+        </div>
+      </section>
       <div className='footer-buffer'></div>
-      <footer>
+      <footer className='columns-2'>
         <a aria-label="View my Github profile" target="_blank" href="https://github.com/santos-al" ><img className="svg-links" src={isDark ? githubLogoLight : githubLogoDark} alt="Github logo"/></a>
         <a aria-label="View my Linkedin profile" target="_blank" href="https://www.linkedin.com/in/santos-alexandre1"><img className="svg-links" src={isDark ? linkedinLogoLight : linkedinLogoDark} alt="Linkedin logo"/></a>
       </footer>

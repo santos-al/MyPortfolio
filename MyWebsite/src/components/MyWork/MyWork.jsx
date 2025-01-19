@@ -1,0 +1,1 @@
+// Template for each project displayed
