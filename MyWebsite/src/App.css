@@ -9,8 +9,14 @@
   /* position: fixed; */
   width: 100%;
   margin: 0 auto;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: var(--color-primary);
+}
+
+/* Nav */
+
+nav {
+  margin-top: 50px;
 }
 
 .title {
@@ -35,8 +41,65 @@
   box-shadow: 8px 5px 11px var(--color-dark);
 }
 
+div.scroll {
+  margin-top: 30px;
+  height: 200px;
+}
+
+button.down-arrow-button {
+  background-color: transparent;
+  border: none;
+}
+
+img.down-arrow {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+img.down-arrow:hover {
+  opacity: 50%;
+}
+
+/* Buffers */
+
+div.techsync-buffer {
+  background-image: linear-gradient(var(--color-primary), black);
+  width: 100%;
+  height: 300px;
+}
+
+div.footer-buffer {
+  background-image: linear-gradient(black 20%, var(--color-primary) 80%);
+  width: 100%;
+  height: 1000px;
+}
+
+/* Projects */
+
+div.techsync {
+  color: whitesmoke;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+
+  /* border-style: solid;
+  border-width: 50px;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+  border-image-source: linear-gradient(to bottom, red, black); /* Gradient */
+  /* border-image-slice: 1;  */
+  
+}
+
+/* Footer */
 footer {
-  margin-top: 50px;
+  height: 200px;
 }
 
 footer a {

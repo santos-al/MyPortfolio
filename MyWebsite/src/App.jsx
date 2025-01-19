@@ -1,15 +1,17 @@
-import './App.css'
-import githubLogoLight from "./assets/github-mark-light.svg"
-import linkedinLogoLight from "./assets/linkedin-light.svg"
-import githubLogoDark from "./assets/github-mark-dark.svg"
-import linkedinLogoDark from "./assets/linkedin-dark.svg"
+import './App.css';
+import githubLogoLight from "./assets/github-mark-light.svg";
+import linkedinLogoLight from "./assets/linkedin-light.svg";
+import githubLogoDark from "./assets/github-mark-dark.svg";
+import linkedinLogoDark from "./assets/linkedin-dark.svg";
 import MyResume from "./assets/Alexandre-Santos-Resume.pdf";
+import downArrowLight from "./assets/down-arrow-light.svg";
+import downArrowDark from "./assets/down-arrow-dark.svg";
 
-import Toggle from './components/Toggle/Toggle'
+import Toggle from './components/Toggle/Toggle';
 import NavBar from './components/NavBar/NavBar';
 
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react';
 
 function App() {
 
@@ -31,7 +33,13 @@ function App() {
   } else {
     document.getElementById("html").style.backgroundColor = "#efeedc";
   }
-  
+
+  const techSyncRef = useRef(null);
+
+   // Function to scroll to the "More Info" section
+   const scrollToMoreInfo = () => {
+    techSyncRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className='App' data-theme={isDark ? "dark" : "light"}>
@@ -46,6 +54,21 @@ function App() {
       <a className='box' target="_blank" href='https://tech-sync.io/talent'>Tech-Sync</a>
       <a className='box'>Authentic Ear Academy (Coming Soon)</a>
       <a target="_blank" className='box' href={MyResume} download="Alexandre-Santos-Resume.pdf">Resume Download</a>
+      <div className='scroll'>
+        <button className='down-arrow-button' onClick={scrollToMoreInfo}><img src={isDark ? downArrowLight : downArrowDark} className='down-arrow' /></button>
+      </div>
+      <div className='techsync-buffer'></div>
+      <div 
+        className='techsync'
+        ref={techSyncRef}
+      >
+        <h2>TechSync</h2>
+        <h3>Overview</h3>
+        <p>overview explanation</p>
+        <h3>Tech specs</h3>
+        <p>tech explanation</p>
+      </div>
+      <div className='footer-buffer'></div>
       <footer>
         <a aria-label="View my Github profile" target="_blank" href="https://github.com/santos-al" ><img className="svg-links" src={isDark ? githubLogoLight : githubLogoDark} alt="Github logo"/></a>
         <a aria-label="View my Linkedin profile" target="_blank" href="https://www.linkedin.com/in/santos-alexandre1"><img className="svg-links" src={isDark ? linkedinLogoLight : linkedinLogoDark} alt="Linkedin logo"/></a>

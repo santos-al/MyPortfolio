@@ -15,6 +15,12 @@
   --color-accent: hsl(172, 80%, 80%);
     /* Dark color */
   --color-dark: hsl(0, 0%, 35%);
+
+
+
+  /* Tech-Sync colors */
+  --techsync-color-blue: hsl(196, 77%, 66%);
+  --techsync-color-purple: hsl(257, 89%, 65%);
 }
 
 /* #root {
