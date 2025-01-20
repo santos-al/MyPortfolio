@@ -25,7 +25,7 @@ const contentList = {
       link: "https://tech-sync.io/talent",
       specialStyle: {
         purple: {color: "var(--techsync-color-purple)"},
-        blue: {color: "var(--techsync-color-blue"}
+        blue: {color: "var(--techsync-color-blue)"}
       }
     },
 

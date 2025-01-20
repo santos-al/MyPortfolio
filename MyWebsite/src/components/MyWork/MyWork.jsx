@@ -34,7 +34,7 @@ export default function MyWork({ contentList, scrollLocation }) {
 }
 
 
-// Add PropTypes validation
+// PropTypes validation
 MyWork.propTypes = {
   scrollLocation: PropTypes.object.isRequired,
   contentList: PropTypes.object.isRequired,
