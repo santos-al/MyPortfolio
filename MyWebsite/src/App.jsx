@@ -11,6 +11,8 @@ import Toggle from './components/Toggle/Toggle';
 import NavBar from './components/NavBar/NavBar';
 import MyWork from './components/MyWork/MyWork';
 
+import WorkContent from './components/MyWork/myWorkContent.js';
+
 import { useState, useEffect, useRef } from 'react';
 
 function App() {
@@ -57,7 +59,7 @@ function App() {
       <div className='scroll'>
         <button className='down-arrow-button' onClick={scrollToMoreInfo}><img src={isDark ? downArrowLight : downArrowDark} className='down-arrow' alt='arrow pointing downwards' /></button>
       </div>
-      <MyWork scrollLocation={techSyncRef}/>
+      <MyWork contentList={WorkContent.techsync} scrollLocation={techSyncRef}/>
       <footer className='columns-2'>
         <a aria-label="View my Github profile" target="_blank" href="https://github.com/santos-al" ><img className="svg-links" src={isDark ? githubLogoLight : githubLogoDark} alt="Github logo"/></a>
         <a aria-label="View my Linkedin profile" target="_blank" href="https://www.linkedin.com/in/santos-alexandre1"><img className="svg-links" src={isDark ? linkedinLogoLight : linkedinLogoDark} alt="Linkedin logo"/></a>
