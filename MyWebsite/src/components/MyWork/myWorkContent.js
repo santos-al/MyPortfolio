@@ -50,14 +50,14 @@ const contentList = {
       My passion for technology and innovation inspired me to transition into software development, where I now specialize in full-stack development with a focus on the MERN stack. 
       I thrive in environments where I can combine my technical skills with my business acumen to create impactful solutions. 
       I continuously strive to expand my knowledge by studying new technologies and experimenting with side projects to sharpen my skills and explore innovative ideas. In addition, 
-      I am constantly furthering my education by delving into new programming languages, computer science fundamentals, and the underlying principles of computer hardware.`
+      I am furthering my education by delving into new programming languages, computer science fundamentals, and the underlying principles of computer hardware.`
     },
     logo: myPic,
     className: "about-me",
     link: "https://www.linkedin.com/in/santos-alexandre1",
     specialStyle: {
-      primary: {color: "var(--color-tertiary)"},
-      secondary: {color: "var(--color-tertiary)"}
+      primary: {color: "var(--color-secondary)"},
+      secondary: {color: "var(--color-secondary)"}
     }
   }
 };

@@ -125,14 +125,16 @@ div.about-me-buffer {
 }
 
 div.about-me {
+
 }
 
 section.about-me {
-
+  color: var(--color-tertiary);
 }
 
 a.about-me-project-title {
-
+  color: var(--color-secondary);
+  font-size: 36px;
 }
 
 a.about-me-project-title:hover {
