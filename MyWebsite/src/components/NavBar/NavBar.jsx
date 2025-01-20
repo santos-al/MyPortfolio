@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 export default function NavBar({ isChecked }) {
 
     NavBar.propTypes = {
-        isChecked: PropTypes.bool
+        isChecked: PropTypes.bool,
       };
 
     return (

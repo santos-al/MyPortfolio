@@ -43,9 +43,9 @@ const contentList = {
       Beyond that, I enjoy reading to expand my perspective and traveling to experience new cultures, meet interesting people, and broaden my horizons.`
     },
     overview: {
-      title: "Profesional",
+      title: "Professional",
       content: 
-      `I am a driven and adaptable individual with a unique blend of expertise in both finance and software development. 
+      `I am a driven and adaptable individual with a unique blend of expertise in finance and software development. 
       I began my career in the finance industry, where I developed a strong foundation in business operations, data analysis, and problem-solving. 
       My passion for technology and innovation inspired me to transition into software development, where I now specialize in full-stack development with a focus on the MERN stack. 
       I thrive in environments where I can combine my technical skills with my business acumen to create impactful solutions. 

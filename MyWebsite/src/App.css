@@ -129,16 +129,26 @@ div.about-me {
 }
 
 section.about-me {
+  width: 100% !important;
   color: var(--color-tertiary);
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 a.about-me-project-title {
   color: var(--color-secondary);
   font-size: 36px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 a.about-me-project-title:hover {
-
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
 }
 
 h3.about-me-project-subtitle {
@@ -146,14 +156,24 @@ h3.about-me-project-subtitle {
 }
 
 img.about-me-project-image {
-
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
 }
 
-div.about-project-text {
-
+div.about-me-project-text {
+  font-size: 14px;
+  padding-left: 50px;
 }
 
 /* Footer */
+
+button.up-arrow {
+  height: 150px;
+  cursor: pointer;
+  transform: scaleY(-1);
+}
+
 footer {
   background-image: linear-gradient(black 20%, var(--color-primary) 80%);
   display: flex;
