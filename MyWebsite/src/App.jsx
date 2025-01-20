@@ -87,7 +87,7 @@ function App() {
         </div>
         <div className='section-column sm:w-1/2 w-full flex items-center justify-center' style={{flexDirection: "column"}}>
           <img className="project-image max-h-full" src={techsyncLogo} alt='Logo for TechSync'></img>
-          <a className='website-link'>Visit Website</a>
+          <a className='website-link' target="_blank" href='https://tech-sync.io/talent'>Visit Website</a>
         </div>
       </section>
       {/* <div className='footer-buffer'></div> */}
