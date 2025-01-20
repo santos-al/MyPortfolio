@@ -37,9 +37,15 @@ function App() {
   }
 
   const techSyncRef = useRef(null);
+  const aboutMeRef = useRef(null);
 
-   // Function to scroll to the "More Info" section
-   const scrollToMoreInfo = () => {
+   // Function to scroll to the "Tech Sync" section
+   const scrollToAboutMe = () => {
+    aboutMeRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+   // Function to scroll to the "Tech Sync" section
+   const scrollToTechSync = () => {
     techSyncRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -57,7 +63,11 @@ function App() {
       <a className='box'>Authentic Ear Academy (Coming Soon)</a>
       <a target="_blank" className='box' href={MyResume} download="Alexandre-Santos-Resume.pdf">Resume Download</a>
       <div className='scroll'>
-        <button className='down-arrow-button' onClick={scrollToMoreInfo}><img src={isDark ? downArrowLight : downArrowDark} className='down-arrow' alt='arrow pointing downwards' /></button>
+        <button className='down-arrow-button' onClick={scrollToAboutMe}><img src={isDark ? downArrowLight : downArrowDark} className='down-arrow' alt='arrow pointing downwards' /></button>
+      </div>
+      <MyWork contentList={WorkContent.aboutMe} scrollLocation={aboutMeRef}/>
+      <div className='scroll'>
+        <button className='down-arrow-button' onClick={scrollToTechSync}><img src={isDark ? downArrowLight : downArrowDark} className='down-arrow' alt='arrow pointing downwards' /></button>
       </div>
       <MyWork contentList={WorkContent.techsync} scrollLocation={techSyncRef}/>
       <footer className='columns-2'>

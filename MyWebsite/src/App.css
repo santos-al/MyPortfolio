@@ -61,21 +61,13 @@ img.down-arrow:hover {
   opacity: 70%;
 }
 
-/* Buffers */
+/* Tech-Sync Section */
 
 div.techsync-buffer {
   background-image: linear-gradient(var(--color-primary), black);
   width: 100%;
   height: 300px;
 }
-
-/* div.footer-buffer {
-  background-image: linear-gradient(black 20%, var(--color-primary) 80%);
-  width: 100%;
-  height: 1000px;
-} */
-
-/* Projects */
 
 section.techsync {
   font-family: Helvetica, sans-serif;
@@ -89,11 +81,7 @@ section.techsync {
   width: 100%;
 }
 
-/* div.section-column {
-  width: 50%
-} */
-
-a.project-title {
+a.techsync-project-title {
   font-size: 46px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -102,18 +90,18 @@ a.project-title {
   border-radius: 5px;
 }
 
-a.project-title:hover {
+a.techsync-project-title:hover {
   color: black;
   background-color: var(--techsync-color-blue);
 }
 
-h3.project-subtitle {
+h3.techsync-project-subtitle {
   font-size: 25px;
   margin-bottom: 2px;
   margin-top: 12px;
 }
 
-img.project-image {
+img.techsync-project-image {
   max-width: 100%;
   max-height: 100%;
   height: 300px;
@@ -122,21 +110,45 @@ img.project-image {
   padding: 10px;
 }
 
-div.project-text {
+div.techsync-project-text {
   padding-left: 50px;
   font-size: 18px;
 }
 
-a.website-link {
-  font-size: 10px;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 5px;
+
+/* About Me Section*/
+
+div.about-me-buffer {
+  background-image: var(--color-primary);
+  width: 100%;
+  height: 300px;
 }
 
-a.website-link:hover {
-  color: black;
-  background-color: var(--techsync-color-purple);
+div.about-me {
+}
+
+section.about-me {
+
+}
+
+a.about-me-project-title {
+
+}
+
+a.about-me-project-title:hover {
+
+}
+
+h3.about-me-project-subtitle {
+
+}
+
+img.about-me-project-image {
+
+}
+
+div.about-project-text {
+
 }
 
 /* Footer */
