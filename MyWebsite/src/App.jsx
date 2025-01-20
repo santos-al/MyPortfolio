@@ -52,7 +52,7 @@ function App() {
         handleChange={() => setIsDark(!isDark)}
       />
       <h1 className='title'>Projects</h1>
-      <a className='box' onClick={scrollToMoreInfo}>Tech-Sync</a>
+      <a className='box' target="_blank" href='https://tech-sync.io/talent'>Tech-Sync</a>
       <a className='box'>Authentic Ear Academy (Coming Soon)</a>
       <a target="_blank" className='box' href={MyResume} download="Alexandre-Santos-Resume.pdf">Resume Download</a>
       <div className='scroll'>
@@ -64,24 +64,33 @@ function App() {
         ref={techSyncRef}
       >
 
-        <div className='w-1/2'>
+        <div className='section-column sm:w-1/2 w-full'>
           <div className='flex justify-center'>
             <a className='project-title' target="_blank" href='https://tech-sync.io/talent'>Tech-Sync</a>
           </div>
-          <div>
-            <h3>Overview</h3>
-            <p>overview explanation</p>
+          <div className='project-text'>
+            <h3 className='project-subtitle' style={{color: "var(--techsync-color-purple)"}}>Description</h3>
+            <p>
+              Unlock the next level of your tech career with Tech-Sync, where we simplify your job search into a streamlined experience based on probability. 
+              Our advanced matchmaking system will connect you with startups that align with your unique skills and career goals. 
+              Say goodbye to traditional job sourcing and hello to a tailored path toward your dream role.
+            </p>
           </div>
-          <div>
-            <h3>Tech specs</h3>
-            <p>tech explanation</p>           
+          <div className='project-text'>
+            <h3 className='project-subtitle' style={{color: "var(--techsync-color-blue)"}}>App Overview</h3>
+            <p>Tech-Sync is a MERN Stack application co-developed by me and another programmer. 
+              As graduates of web development bootcamps, we experienced firsthand how challenging it can be to break into the tech industry, 
+              especially for those with non-traditional backgrounds. We built this app to enhance our skills, improve our job prospects, 
+              and address a market need by connecting tech professionals with potential employers in a unique way.
+            </p>           
           </div>
         </div>
-        <div className='w-1/2 flex items-center justify-center'>
-          <img className="techsync-logo" src={techsyncLogo} alt='Logo for TechSync' ></img>
+        <div className='section-column sm:w-1/2 w-full flex items-center justify-center' style={{flexDirection: "column"}}>
+          <img className="project-image max-h-full" src={techsyncLogo} alt='Logo for TechSync'></img>
+          <a className='website-link'>Visit Website</a>
         </div>
       </section>
-      <div className='footer-buffer'></div>
+      {/* <div className='footer-buffer'></div> */}
       <footer className='columns-2'>
         <a aria-label="View my Github profile" target="_blank" href="https://github.com/santos-al" ><img className="svg-links" src={isDark ? githubLogoLight : githubLogoDark} alt="Github logo"/></a>
         <a aria-label="View my Linkedin profile" target="_blank" href="https://www.linkedin.com/in/santos-alexandre1"><img className="svg-links" src={isDark ? linkedinLogoLight : linkedinLogoDark} alt="Linkedin logo"/></a>

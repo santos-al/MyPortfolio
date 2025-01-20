@@ -32,7 +32,7 @@ nav {
   width: 250px;
   text-align: center;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
 }
 
@@ -69,11 +69,11 @@ div.techsync-buffer {
   height: 300px;
 }
 
-div.footer-buffer {
+/* div.footer-buffer {
   background-image: linear-gradient(black 20%, var(--color-primary) 80%);
   width: 100%;
   height: 1000px;
-}
+} */
 
 /* Projects */
 
@@ -89,8 +89,12 @@ section.techsync {
   width: 100%;
 }
 
+/* div.section-column {
+  width: 50%
+} */
+
 a.project-title {
-  font-size: 30px;
+  font-size: 46px;
   font-weight: bold;
   margin-bottom: 10px;
   width: fit-content;
@@ -103,26 +107,52 @@ a.project-title:hover {
   background-color: var(--techsync-color-blue);
 }
 
-a.project-title:active {
+h3.project-subtitle {
+  font-size: 25px;
+  margin-bottom: 2px;
+  margin-top: 12px;
+  color: var(--techsync-color-blue);
+}
+
+img.project-image {
+  max-width: 100%;
+  max-height: 100%;
+  height: 300px;
+  width: 300px;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+div.project-text {
+  padding-left: 50px;
+  font-size: 18px;
+}
+
+a.website-link {
+  font-size: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+a.website-link:hover {
   color: black;
   background-color: var(--techsync-color-purple);
 }
 
-img.techsync-logo {
-  max-height: 100px;
-  max-width: 100px;
-  border-radius: 25px;
-}
-
 /* Footer */
 footer {
+  background-image: linear-gradient(black 20%, var(--color-primary) 80%);
   display: flex;
-  height: 200px;
+  height: 500px;
   justify-content: center;
+  width: 100%;
+  align-items: center;
 }
 
 footer a {
   margin: 50px;
+  
 }
 
 img.svg-links {
@@ -134,6 +164,47 @@ img.svg-links:hover {
   opacity: 70%;
 }
 
-@media screen {
-  
+@media only screen and (max-width: 639px) {
+  img.project-image {
+    height: 200px;
+    width: 200px;
+  }
+  div.section-column {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  div.project-text {
+    padding-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
+  a.project-title {
+    font-size: 32px;
+  }
+
+  h3.project-subtitle {
+    font-size: 20px;
+  }
+
+  div.project-text {
+    font-size: 12px;
+  }
+
+  img.project-image {
+    height: 150px;
+    width: 150px;
+  }
+
+  img.svg-links {
+    width: 58px;
+    height: 56px;
+  }
+
+  footer a {
+    margin: 25px;
+  }
+
 }
