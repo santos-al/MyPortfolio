@@ -39,16 +39,17 @@ function App() {
   const techSyncRef = useRef(null);
   const aboutMeRef = useRef(null);
   const projectsRef = useRef(null);
+  const footerRef = useRef(null);
 
    // Function to scroll to the "About Me" section
    const scrollToAboutMe = () => {
     aboutMeRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
-   // Function to scroll to the "Tech Sync" section
-   const scrollToTechSync = () => {
-    techSyncRef.current.scrollIntoView({ behavior: "smooth" });
-  };
+  //  // Function to scroll to the "Tech Sync" section
+  //  const scrollToTechSync = () => {
+  //   techSyncRef.current.scrollIntoView({ behavior: "smooth" });
+  // };
 
      // Function to scroll to the "Projects" section
      const scrollToProjects = () => {
@@ -72,12 +73,9 @@ function App() {
       <div className='scroll'>
         <button className='down-arrow-button' onClick={scrollToAboutMe}><img src={isDark ? downArrowLight : downArrowDark} className='down-arrow' alt='arrow pointing downwards' /></button>
       </div>
-      <MyWork contentList={WorkContent.aboutMe} scrollLocation={aboutMeRef}/>
-      <div className='scroll'>
-        <button className='down-arrow-button' onClick={scrollToTechSync}><img src={isDark ? downArrowLight : downArrowDark} className='down-arrow' alt='arrow pointing downwards' /></button>
-      </div>
-      <MyWork contentList={WorkContent.techsync} scrollLocation={techSyncRef}/>
-      <footer className='columns-3'>
+      <MyWork contentList={WorkContent.aboutMe} scrollReference={aboutMeRef} isDark={isDark} scrollLocation={techSyncRef}/>
+      <MyWork contentList={WorkContent.techsync} scrollReference={techSyncRef} isDark={isDark} scrollLocation={footerRef} isWhite={true}/>
+      <footer ref={footerRef} className='columns-3'>
         <a aria-label="View my Github profile" target="_blank" href="https://github.com/santos-al" ><img className="svg-links" src={isDark ? githubLogoLight : githubLogoDark} alt="Github logo"/></a>
         <div className='scroll-up-arrow'>
           <button className='down-arrow-button up-arrow' onClick={scrollToProjects}><img src={isDark ? downArrowLight : downArrowDark} className='down-arrow' alt='arrow pointing upwards' /></button>
