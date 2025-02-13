@@ -28,7 +28,6 @@ function App() {
   // Use State to update UI and display content of selected button
   const [contentDisplayed, setContentDisplayed] = useState('aboutMe')
 
-
   useEffect(() => {
     // Update localStorage whenever isDark changes
     localStorage.setItem('isDark', JSON.stringify(isDark));
@@ -46,8 +45,6 @@ function App() {
     setContentDisplayed(clickedButton)
   }
 
-
-
   return (
     <div className='App' data-theme={isDark ? "dark" : "light"}>
       <NavBar 
@@ -60,11 +57,11 @@ function App() {
       <h1 className='title'>{contentList[contentDisplayed].title}</h1>
       <main className='page-content'>
         <section className='content-selection'>
-          <a className='box' onClick={() => handleButtonClick('aboutMe')}>About Me</a>
-          <a className='box' onClick={() => handleButtonClick('techsync')}>Tech-Sync</a>
-          <a className='box' onClick={() => handleButtonClick('taskManager')}>Task Manager</a>
-          <a className='box' onClick={() => handleButtonClick('employeeTracker')}>Employee Tracker</a>
-          <a className='box' onClick={() => handleButtonClick('noteTaker')}>Note Taker</a>
+          <button className='box' onClick={() => handleButtonClick('aboutMe')}>About Me</button>
+          <button className='box' onClick={() => handleButtonClick('techsync')}>Tech-Sync</button>
+          <button className='box' onClick={() => handleButtonClick('taskManager')}>Task Manager</button>
+          <button className='box' onClick={() => handleButtonClick('employeeTracker')}>Employee Tracker</button>
+          <button className='box' onClick={() => handleButtonClick('noteTaker')}>Note Taker</button>
           {/* <a className='box' onClick={() => handleButtonClick('certifications')}>Certifications</a> */}
           <a target="_blank" className='box' href={MyResume} download="Resume-Alexandre-Santos.pdf">Resume Download</a>
         </section>
