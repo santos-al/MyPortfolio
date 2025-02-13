@@ -1,17 +1,23 @@
+/* General Layout */
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* position: fixed; */
   width: 100%;
   margin: 0 auto;
-  /* height: 100vh; */
+  min-height: 100vh; /* Allow scrolling */
   background-color: var(--color-primary);
+  padding: 20px;
+  overflow-x: hidden;
 }
 
-/* Nav */
+/* Ensure scrolling */
+body {
+  overflow-x: hidden;
+}
 
+/* Navigation */
 nav {
   margin-top: 50px;
 }
@@ -21,14 +27,16 @@ nav {
   margin-bottom: 30px;
   font-size: 36px;
   font-weight: bold;
+  text-align: center;
 }
 
+/* Button Styling */
 .box {
   padding: 20px;
   border-radius: 10px;
   background-color: var(--color-tertiary);
   color: var(--color-primary);
-  margin: 10px;
+  margin: 10px 0; /* Stack buttons vertically */
   width: 250px;
   text-align: center;
   font-weight: bold;
@@ -41,153 +49,7 @@ nav {
   box-shadow: 8px 5px 11px var(--color-dark);
 }
 
-div.scroll {
-  margin-top: 30px;
-  height: 200px;
-}
-
-button.down-arrow-button {
-  background-color: transparent;
-  border: none;
-}
-
-img.down-arrow {
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
-}
-
-img.down-arrow:hover {
-  opacity: 70%;
-}
-
-/* Tech-Sync Section */
-
-div.techsync-buffer {
-  background-image: linear-gradient(var(--color-primary), black);
-  width: 100%;
-  height: 300px;
-}
-
-section.techsync {
-  font-family: Helvetica, sans-serif;
-  color: whitesmoke;
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  width: 100%;
-}
-
-a.techsync-project-title {
-  font-size: 46px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  width: fit-content;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-a.techsync-project-title:hover {
-  color: black;
-  background-color: var(--techsync-color-blue);
-}
-
-h3.techsync-project-subtitle {
-  font-size: 25px;
-  margin-bottom: 2px;
-  margin-top: 12px;
-}
-
-img.techsync-project-image {
-  max-width: 100%;
-  max-height: 100%;
-  height: 300px;
-  width: 300px;
-  border-radius: 30px;
-  padding: 10px;
-}
-
-div.techsync-project-text {
-  padding-left: 50px;
-  font-size: 18px;
-}
-
-
-/* About Me Section*/
-
-div.about-me-buffer {
-  background-image: var(--color-primary);
-  width: 100%;
-  height: 300px;
-}
-
-div.about-me {
-
-}
-
-section.about-me {
-  width: 100% !important;
-  color: var(--color-tertiary);
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-a.about-me-project-title {
-  color: var(--color-secondary);
-  font-size: 36px;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-a.about-me-project-title:hover {
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
-}
-
-h3.about-me-project-subtitle {
-
-}
-
-img.about-me-project-image {
-  width: 50%;
-  height: auto;
-  border-radius: 10px;
-}
-
-div.about-me-project-text {
-  font-size: 14px;
-  padding-left: 50px;
-}
-
-/* Footer */
-
-button.up-arrow {
-  height: 150px;
-  cursor: pointer;
-  transform: scaleY(-1);
-}
-
-footer {
-  background-image: linear-gradient(black 20%, var(--color-primary) 80%);
-  display: flex;
-  height: 500px;
-  justify-content: center;
-  width: 100%;
-  align-items: flex-end;
-}
-
-footer a {
-  margin: 50px;
-  
-}
-
+/* SVG Styling */
 img.svg-links {
   width: 78px;
   height: 76px;
@@ -197,47 +59,187 @@ img.svg-links:hover {
   opacity: 70%;
 }
 
-@media only screen and (max-width: 639px) {
-  img.project-image {
-    height: 200px;
-    width: 200px;
-  }
-  div.section-column {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+/* Footer (Socials) */
+/* Footer (Socials) */
+div.socials {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px 0;
+}
 
-  div.project-text {
-    padding-left: 0px;
+/* Main Content Layout */
+main.page-content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Left Column (Buttons) */
+section.content-selection {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Right Column (Content Display) */
+section.content-frame {
+  display: flex;
+  flex-direction: row; /* Default layout: text & image side by side */
+  border-width: 10px;
+  border-radius: 25px;
+  border-color: var(--color-tertiary);
+  border-style: solid;
+  width: 65%;
+  justify-content: space-between;
+  padding: 25px;
+  min-height: 60vh;
+  gap: 20px;
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Text Styling */
+div.text-column {
+  align-self: center;
+  width: 50%;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+/* Image Styling */
+div.image-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+img.project-image {
+  border-radius: 5px;
+  width: 80%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure no text overflows */
+section h3 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  max-width: 100%;
+}
+
+/* Content-Specific Styling */
+section.about-me {
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
+
+  p {
+    font-size: 14px;
+    max-width: 100%;
   }
 }
 
-@media only screen and (max-width: 400px) {
+section.techsync {
+  background-color: black;
+  color: white;
+}
 
-  a.project-title {
-    font-size: 32px;
+section.task-manager {
+  background-color: hsl(1, 8%, 62%);
+}
+
+section.employee-tracker {
+  background-color: hsl(224, 21%, 10%);
+  color: whitesmoke;
+}
+
+section.note-taker {
+  background-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  main.page-content {
+    flex-direction: column;
+    align-items: center;
   }
 
-  h3.project-subtitle {
-    font-size: 20px;
+  section.content-selection {
+    width: 100%;
+    display: grid; /* Arrange buttons in a grid */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 15px; /* Add spacing between buttons */
+    align-items: center;
+    justify-content: center;
   }
 
-  div.project-text {
-    font-size: 12px;
+  section.content-frame {
+    width: 90%;
+    min-height: auto;
+    margin: 20px 0;
   }
 
-  img.project-image {
-    height: 150px;
-    width: 150px;
+  .box {
+    width: 100%; /* Ensure buttons take up full column width */
+    text-align: center;
+  }
+}
+
+/* Stack text above image and increase text width on small screens */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
   }
 
-  img.svg-links {
-    width: 58px;
-    height: 56px;
+  .title {
+    font-size: 28px;
   }
 
-  footer a {
-    margin: 25px;
+  section.content-selection {
+    display: flex;
+    width: 100%;
   }
 
+  section.content-frame {
+    width: 100%;
+    padding: 15px;
+    flex-direction: column; /* Stack text above image */
+    align-items: center;
+  }
+
+  .text-column {
+    width: 80%; /* Expand text width */
+    text-align: center;
+  }
+
+  .image-column {
+    width: 100%; /* Full width image */
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .box {
+    width: 80%;
+  }
+
+  div.socials {
+    position: relative;
+    bottom: auto;
+    margin-top: 20px;
+  }
+
+  div.text-column {
+    width: 100%;
+  }
 }

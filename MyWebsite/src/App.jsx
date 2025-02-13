@@ -5,15 +5,17 @@ import linkedinLogoLight from "./assets/linkedin-light.svg";
 import githubLogoDark from "./assets/github-mark-dark.svg";
 import linkedinLogoDark from "./assets/linkedin-dark.svg";
 import MyResume from "./assets/Alexandre-Santos-Resume.pdf";
-import downArrowLight from "./assets/down-arrow-light.svg";
-import downArrowDark from "./assets/down-arrow-dark.svg";
+import DisplayContent from './components/DisplayContent/DisplayContent';
+import contentList from './components/MyWork/myWorkContent.js'
+// import downArrowLight from "./assets/down-arrow-light.svg";
+// import downArrowDark from "./assets/down-arrow-dark.svg";
 
 import Toggle from './components/Toggle/Toggle';
 import NavBar from './components/NavBar/NavBar';
-import MyWork from './components/MyWork/MyWork';
-import WorkContent from './components/MyWork/myWorkContent.js';
+// import MyWork from './components/MyWork/MyWork';
+// import WorkContent from './components/MyWork/myWorkContent.js';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
 
@@ -22,6 +24,10 @@ function App() {
     const savedTheme = localStorage.getItem("isDark");
     return savedTheme !== null ? JSON.parse(savedTheme) : false;
   });
+
+  // Use State to update UI and display content of selected button
+  const [contentDisplayed, setContentDisplayed] = useState('aboutMe')
+
 
   useEffect(() => {
     // Update localStorage whenever isDark changes
@@ -36,25 +42,11 @@ function App() {
     document.getElementById("html").style.backgroundColor = "#efeedc";
   }
 
-  const techSyncRef = useRef(null);
-  const aboutMeRef = useRef(null);
-  const projectsRef = useRef(null);
-  const footerRef = useRef(null);
+  function handleButtonClick(clickedButton) {
+    setContentDisplayed(clickedButton)
+  }
 
-   // Function to scroll to the "About Me" section
-   const scrollToAboutMe = () => {
-    aboutMeRef.current.scrollIntoView({ behavior: "smooth" });
-  };
 
-  //  // Function to scroll to the "Tech Sync" section
-  //  const scrollToTechSync = () => {
-  //   techSyncRef.current.scrollIntoView({ behavior: "smooth" });
-  // };
-
-     // Function to scroll to the "Projects" section
-     const scrollToProjects = () => {
-      projectsRef.current.scrollIntoView({ behavior: "smooth" });
-    };
 
   return (
     <div className='App' data-theme={isDark ? "dark" : "light"}>
@@ -64,24 +56,24 @@ function App() {
       <Toggle
         isChecked={isDark}
         handleChange={() => setIsDark(!isDark)}
-        scrollLocation={projectsRef}
       />
-      <h1 className='title'>Projects</h1>
-      <a className='box' target="_blank" href='https://tech-sync.io/talent'>Tech-Sync</a>
-      <a className='box'>Authentic Ear Academy (Coming Soon)</a>
-      <a target="_blank" className='box' href={MyResume} download="Alexandre-Santos-Resume.pdf">Resume Download</a>
-      <div className='scroll'>
-        <button className='down-arrow-button' onClick={scrollToAboutMe}><img src={isDark ? downArrowLight : downArrowDark} className='down-arrow' alt='arrow pointing downwards' /></button>
-      </div>
-      <MyWork contentList={WorkContent.aboutMe} scrollReference={aboutMeRef} isDark={isDark} scrollLocation={techSyncRef}/>
-      <MyWork contentList={WorkContent.techsync} scrollReference={techSyncRef} isDark={isDark} scrollLocation={footerRef} isWhite={true}/>
-      <footer ref={footerRef} className='columns-3'>
-        <a aria-label="View my Github profile" target="_blank" href="https://github.com/santos-al" ><img className="svg-links" src={isDark ? githubLogoLight : githubLogoDark} alt="Github logo"/></a>
-        <div className='scroll-up-arrow'>
-          <button className='down-arrow-button up-arrow' onClick={scrollToProjects}><img src={isDark ? downArrowLight : downArrowDark} className='down-arrow' alt='arrow pointing upwards' /></button>
+      <h1 className='title'>{contentList[contentDisplayed].title}</h1>
+      <main className='page-content'>
+        <section className='content-selection'>
+          <a className='box' onClick={() => handleButtonClick('aboutMe')}>About Me</a>
+          <a className='box' onClick={() => handleButtonClick('techsync')}>Tech-Sync</a>
+          <a className='box' onClick={() => handleButtonClick('taskManager')}>Task Manager</a>
+          <a className='box' onClick={() => handleButtonClick('employeeTracker')}>Employee Tracker</a>
+          <a className='box' onClick={() => handleButtonClick('noteTaker')}>Note Taker</a>
+          {/* <a className='box' onClick={() => handleButtonClick('certifications')}>Certifications</a> */}
+          <a target="_blank" className='box' href={MyResume} download="Resume-Alexandre-Santos.pdf">Resume Download</a>
+        </section>
+        <DisplayContent contentList={contentList[contentDisplayed]}/>
+        <div className='socials'>
+            <a aria-label="View my Github profile" target="_blank" href="https://github.com/santos-al" ><img className="svg-links" src={isDark ? githubLogoLight : githubLogoDark} alt="Github logo"/></a>
+            <a aria-label="View my Linkedin profile" target="_blank" href="https://www.linkedin.com/in/santos-alexandre1"><img className="svg-links" src={isDark ? linkedinLogoLight : linkedinLogoDark} alt="Linkedin logo"/></a>
         </div>
-        <a aria-label="View my Linkedin profile" target="_blank" href="https://www.linkedin.com/in/santos-alexandre1"><img className="svg-links" src={isDark ? linkedinLogoLight : linkedinLogoDark} alt="Linkedin logo"/></a>
-      </footer>
+      </main>
     </div>
   )
 }
