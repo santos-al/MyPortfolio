@@ -255,4 +255,8 @@ section.note-taker {
   div.text-column {
     width: 100%;
   }
+
+  img.project-image {
+    width: 100%;
+  }
 }
