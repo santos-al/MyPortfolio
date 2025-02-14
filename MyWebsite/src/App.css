@@ -17,11 +17,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Navigation */
-nav {
-  margin-top: 50px;
-}
-
 .title {
   color: var(--color-secondary);
   margin-bottom: 30px;
@@ -124,7 +119,7 @@ section h3 {
 
 /* Footer (Socials) */
 div.socials {
-  margin-top: 100px;
+  margin-top: 20px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -132,12 +127,16 @@ div.socials {
   padding: 15px 0;
 }
 
+div.socials-footer {
+  display: none;
+}
+
 /* SVG Styling */
 img.svg-links {
-  width: 68px;
-  height: 66px;
-  margin-left: 100px;
-  margin-right: 100px;
+  width: 48px;
+  height: 46px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 img.svg-links:hover {
@@ -198,6 +197,14 @@ section.note-taker {
   a.box, button.box {
     width: 100%; /* Ensure buttons take up full column width */
     text-align: center;
+  }
+
+  div.socials {
+    display: none;
+  }
+
+  div.socials-footer {
+    display: flex;
   }
 }
 

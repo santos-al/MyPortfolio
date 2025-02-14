@@ -1,9 +1,13 @@
+nav {
+  margin-top: 35px;
+}
+
 .logo {
     margin-top: 25px;
-    height: 12em;
+    height: 13em;
     padding: 1.5em;
-  }  
+}  
 
 .nav-bar-content {
     list-style-type: none;
-  }
+}

@@ -64,9 +64,13 @@ function App() {
           <button className='box' onClick={() => handleButtonClick('noteTaker')}>Note Taker</button>
           {/* <a className='box' onClick={() => handleButtonClick('certifications')}>Certifications</a> */}
           <a target="_blank" className='box' href={MyResume} download="Resume-Alexandre-Santos.pdf">Resume Download</a>
+          <div className='socials'>
+            <a aria-label="View my Github profile" target="_blank" href="https://github.com/santos-al" ><img className="svg-links" src={isDark ? githubLogoLight : githubLogoDark} alt="Github logo"/></a>
+            <a aria-label="View my Linkedin profile" target="_blank" href="https://www.linkedin.com/in/santos-alexandre1"><img className="svg-links" src={isDark ? linkedinLogoLight : linkedinLogoDark} alt="Linkedin logo"/></a>
+          </div>
         </section>
         <DisplayContent contentList={contentList[contentDisplayed]}/>
-        <div className='socials'>
+        <div className='socials-footer'>
             <a aria-label="View my Github profile" target="_blank" href="https://github.com/santos-al" ><img className="svg-links" src={isDark ? githubLogoLight : githubLogoDark} alt="Github logo"/></a>
             <a aria-label="View my Linkedin profile" target="_blank" href="https://www.linkedin.com/in/santos-alexandre1"><img className="svg-links" src={isDark ? linkedinLogoLight : linkedinLogoDark} alt="Linkedin logo"/></a>
         </div>
