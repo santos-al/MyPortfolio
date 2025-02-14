@@ -223,12 +223,12 @@ section.note-taker {
     align-items: center;
   }
 
-  .text-column {
-    width: 80%; /* Expand text width */
-    text-align: center;
+  div.text-column {
+    width: 100%; /* Expand text width */
+    text-align: flex-start;
   }
 
-  .image-column {
+  div.image-column {
     width: 100%; /* Full width image */
     display: flex;
     justify-content: center;
@@ -250,10 +250,6 @@ section.note-taker {
     height: 66px;
     margin-left: 25px;
     margin-right: 25px;
-  }
-
-  div.text-column {
-    width: 100%;
   }
 
   img.project-image {
